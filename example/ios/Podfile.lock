@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - map_helper (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - map_helper (from `.symlinks/plugins/map_helper/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  map_helper:
+    :path: ".symlinks/plugins/map_helper/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  map_helper: 04ea1d15d96cd2dcdf1d6c4ddf255f2f69bb0989
+
+PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
+
+COCOAPODS: 1.10.1
