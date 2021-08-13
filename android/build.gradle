@@ -1,4 +1,4 @@
-group 'com.example.map_helper'
+group 'com.ylzpay.plugin.map_helper'
 version '1.0-SNAPSHOT'
 
 buildscript {

@@ -1,6 +1,7 @@
-package com.example.map_helper
+package com.ylzpay.plugin.map_helper
 
 import androidx.annotation.NonNull
+import com.ylzpay.plugin.map_helper.entity.NavigationParam
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
@@ -22,8 +23,14 @@ class MapHelperPlugin: FlutterPlugin, MethodCallHandler {
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-    if (call.method == "getPlatformVersion") {
-      result.success("Android ${android.os.Build.VERSION.RELEASE}")
+    if (call.method == "openMap") {
+      val navigationParam: NavigationParam? = GsonUtils.fromJson(call.arguments, NavigationParam::class.java)
+      navigationParam?.let {
+        SelectMapDialog
+          .newInstance(lat = it.lat, lng = it.lng, keyword = it.address)
+          .show(supportFragmentManager)
+      }
+      result.success("success")
     } else {
       result.notImplemented()
     }
