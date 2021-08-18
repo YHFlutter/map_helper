@@ -26,8 +26,8 @@ class Address {
 
   Address.fromMap(Map<String, dynamic> map) {
     this.address = map["address"]??'';
-    this.lat = map["lat"];
-    this.lng = map["lng"];
+    this.lat = map["lat"].toString();
+    this.lng = map["lng"].toString();
   }
 
   Map toJson() {
