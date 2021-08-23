@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="请选择地图"
+            android:textColor="#FF222222"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/llytBaiDuMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFF5F5F5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="百度地图"
+                android:textColor="#FF222222"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llytGaoDeMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFF5F5F5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="高德地图"
+                android:textColor="#FF222222"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llytWebMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFF5F5F5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="网页地图（不推荐）"
+                android:textColor="#FF222222"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#FFF5F5F5"/>
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#FF222222"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
