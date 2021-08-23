@@ -24,8 +24,8 @@ class _MyAppState extends State<MyApp> {
   void _openMap() async{
     try {
       String key = textController.text;
-      Address address = Address(address: key,lat: "100.0312",lng: "23.4334");
-      String? result = await MapHelper.openMap(address);
+      String addressJson = "{\"address\":\"" + key + "\", \"lat\":\"100.0312\", \"lng\":\"23.4334\"}";
+      String? result = await MapHelper.openMap(addressJson);
       setState(() {
         _result = result.toString();
       });

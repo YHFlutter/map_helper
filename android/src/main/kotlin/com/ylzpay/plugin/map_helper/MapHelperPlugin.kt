@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.annotation.NonNull
-//import com.blankj.utilcode.util.GsonUtils
+import com.blankj.utilcode.util.GsonUtils
 import com.ylzpay.plugin.map_helper.entity.NavigationParam
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
@@ -34,14 +34,14 @@ class MapHelperPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
     if (call.method == "openMap") {
 
-//      val navigationParam: NavigationParam? = GsonUtils.fromJson(call.arguments.toString(), NavigationParam::class.java)
-//      if (navigationParam != null) {
-//        goToWebMapNavi(
-//          context = this.activity,
-//          keyword = navigationParam.address,
-//          lat = navigationParam.lat,
-//          lng = navigationParam.lng)
-//      }
+      val navigationParam: NavigationParam? = GsonUtils.fromJson(call.arguments.toString(), NavigationParam::class.java)
+      if (navigationParam != null) {
+        goToWebMapNavi(
+          context = this.activity,
+          keyword = navigationParam.address,
+          lat = navigationParam.lat,
+          lng = navigationParam.lng)
+      }
       result.success("success")
     } else {
       result.notImplemented()

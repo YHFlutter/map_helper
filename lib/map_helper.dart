@@ -7,9 +7,9 @@ class MapHelper {
   static const MethodChannel _channel =
       const MethodChannel('map_helper');
 
-  static Future<String?> openMap(Address address) async {
+  static Future<String?> openMap(String address) async {
     try{
-      final String? success = await _channel.invokeMethod('openMap',address.toJson());
+      final String? success = await _channel.invokeMethod('openMap', address);
       return success;
     }catch(e){
       return "exp";
