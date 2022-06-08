@@ -1,3 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.ylzpay.plugin.map_helper">
+
+    <!--声明所要进行交互的应用名-->
+    <queries>
+        <!--百度地图包名-->
+        <package android:name="com.baidu.BaiduMap" />
+        <!--高德地图包名-->
+        <package android:name="com.autonavi.minimap" />
+    </queries>
 </manifest>
