@@ -15,6 +15,33 @@ class MapHelper {
       return "exp";
     }
   }
+
+  static Future<bool?> startLocation(Function(Address address)? handler) async {
+    try{
+      _channel.setMethodCallHandler((call) => Future((){
+        print('--native call-- {method:${call.method},arguments:${call.arguments}}');
+        if(call.method == 'currentLoaction'){
+          Address address = Address.fromMap(call.arguments);
+          if(handler!=null){
+            handler(address);
+          }
+        }
+      }));
+      final bool? success = await _channel.invokeMethod('startLocation');
+      return success;
+    }catch(e){
+      return false;
+    }
+  }
+
+  static Future<bool?> stopLocation() async {
+    try{
+      final bool? success = await _channel.invokeMethod('stopLocation');
+      return success;
+    }catch(e){
+      return false;
+    }
+  }
 }
 
 class Address {
