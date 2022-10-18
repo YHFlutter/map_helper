@@ -2,10 +2,16 @@ PODS:
   - Flutter (1.0.0)
   - map_helper (0.0.1):
     - Flutter
+    - YHMapHelper
+  - YHMapHelper (0.1.0)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - map_helper (from `.symlinks/plugins/map_helper/ios`)
+
+SPEC REPOS:
+  trunk:
+    - YHMapHelper
 
 EXTERNAL SOURCES:
   Flutter:
@@ -14,9 +20,10 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/map_helper/ios"
 
 SPEC CHECKSUMS:
-  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
-  map_helper: 04ea1d15d96cd2dcdf1d6c4ddf255f2f69bb0989
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  map_helper: da60b02cd298a09380285f1404e527e0c55e5a45
+  YHMapHelper: 7edfbe527a5336924a546fc79e901faf50ffa1e2
 
 PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3
